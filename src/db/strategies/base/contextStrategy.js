@@ -1,3 +1,5 @@
+import { ICrud } from "../interfaces/interfaceCrud"
+
 class ContextStrategy extends ICrud {
     constructor(strategy) {
         this._database = strategy
@@ -18,4 +20,8 @@ class ContextStrategy extends ICrud {
     delete(item) {
         return this._database.delete(id)
     }
+}
+
+export {
+    ContextStrategy
 }
