@@ -1,7 +1,8 @@
-import { ICrud } from "../interfaces/interfaceCrud"
+import { ICrud } from "../interfaces/interfaceCrud.js"
 
 class ContextStrategy extends ICrud {
     constructor(strategy) {
+        super()
         this._database = strategy
     }
 
@@ -19,6 +20,10 @@ class ContextStrategy extends ICrud {
 
     delete(item) {
         return this._database.delete(id)
+    }
+
+    isConnected() {
+        return this._database.isConnected()
     }
 }
 

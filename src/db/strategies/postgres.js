@@ -1,4 +1,4 @@
-import { ICrud } from "./interfaces/interfaceCrud"
+import { ICrud } from "./interfaces/interfaceCrud.js"
 
 class Postgres extends ICrud {
     constructor() {
