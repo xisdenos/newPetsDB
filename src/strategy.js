@@ -24,6 +24,16 @@ class ICrud {
     }
 }
 
+class Postgres extends ICrud {
+    constructor() {
+        super()
+    }
+
+    create(item) {
+
+    }
+}
+
 class ContextStrategy extends ICrud {
     constructor(strategy) {
         this._database = strategy
@@ -45,3 +55,6 @@ class ContextStrategy extends ICrud {
         return this._database.delete(id)
     }
 }
+
+const contextPostgres = new ContextStrategy(new Postgres())
+contextPostgres.create()
