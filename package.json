@@ -11,5 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "git-commit-msg-linter": "^3.3.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.13.0"
   }
 }
